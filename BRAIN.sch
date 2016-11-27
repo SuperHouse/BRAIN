@@ -7232,7 +7232,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <part name="GND2" library="freetronics" deviceset="GND" device=""/>
 <part name="H5" library="freetronics" deviceset="M01" device="PTH"/>
 <part name="U$6" library="SparkFun" deviceset="5V" device=""/>
-<part name="C2" library="freetronics-jon" deviceset="C-EU" device="C0805" value="10uF 0805"/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="IC1" library="freetronics-master-v1.1" deviceset="AVR-MEGA8" device="-AI" value="ATMEGA328P"/>
 <part name="X1" library="freetronics" deviceset="CRYSTAL" device="HC49UV" value="16MHz HC49S"/>
@@ -7308,14 +7307,15 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <part name="U$16" library="SparkFun" deviceset="5V" device=""/>
 <part name="S2" library="freetronics-jon" deviceset="TAC_SWITCH_2PIN" device="" value="RESET"/>
 <part name="GND10" library="SparkFun" deviceset="GND" device=""/>
-<part name="C3" library="freetronics-jon" deviceset="C-EU" device="C0805" value="10uF 0805"/>
+<part name="C3" library="freetronics-jon" deviceset="C-EU" device="C1210" value="10uF 1210"/>
+<part name="C2" library="freetronics-jon" deviceset="C-EU" device="C1210" value="10uF 1210"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="149.86" y="12.7" size="3.048" layer="94">SuperHouse Building Brain</text>
 <text x="193.04" y="6.858" size="1.778" layer="94">SKU: BRAIN</text>
-<text x="215.9" y="6.858" size="1.778" layer="94">V1.0 (2015-11-30)</text>
+<text x="215.9" y="6.858" size="1.778" layer="94">V1.1 (2016-11-27)</text>
 <text x="200.66" y="238.76" size="1.778" layer="94">Power</text>
 <text x="203.2" y="175.26" size="1.778" layer="94">Receiver Module</text>
 <text x="149.606" y="6.858" size="1.778" layer="94">www.superhouse.tv/brain</text>
@@ -7391,10 +7391,6 @@ D8: RF RX data</text>
 <instance part="GND2" gate="1" x="180.34" y="132.08"/>
 <instance part="H5" gate="G$1" x="160.02" y="170.18" rot="R270"/>
 <instance part="U$6" gate="G$1" x="154.94" y="147.32"/>
-<instance part="C2" gate="G$1" x="215.9" y="203.2" smashed="yes" rot="R270">
-<attribute name="NAME" x="209.804" y="203.581" size="1.778" layer="95"/>
-<attribute name="VALUE" x="217.424" y="203.581" size="1.778" layer="96"/>
-</instance>
 <instance part="GND5" gate="1" x="132.08" y="342.9"/>
 <instance part="IC1" gate="G$1" x="193.04" y="322.58"/>
 <instance part="X1" gate="G$1" x="157.48" y="327.66" smashed="yes" rot="R90">
@@ -7580,9 +7576,13 @@ D8: RF RX data</text>
 <instance part="U$16" gate="G$1" x="142.24" y="353.06"/>
 <instance part="S2" gate="1" x="160.02" y="213.36" rot="MR0"/>
 <instance part="GND10" gate="1" x="152.4" y="208.28"/>
-<instance part="C3" gate="G$1" x="132.08" y="223.52" smashed="yes">
-<attribute name="NAME" x="131.699" y="217.424" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="136.779" y="217.424" size="1.778" layer="96" rot="R90"/>
+<instance part="C3" gate="G$1" x="132.08" y="223.52" smashed="yes" rot="MR0">
+<attribute name="NAME" x="128.524" y="225.679" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="125.984" y="220.599" size="1.778" layer="96" rot="MR180"/>
+</instance>
+<instance part="C2" gate="G$1" x="215.9" y="203.2" smashed="yes" rot="MR90">
+<attribute name="NAME" x="209.804" y="205.359" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="217.424" y="205.359" size="1.778" layer="96" rot="MR180"/>
 </instance>
 </instances>
 <busses>
@@ -7625,11 +7625,11 @@ D8: RF RX data</text>
 <wire x1="203.2" y1="223.52" x2="203.2" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="223.52" x2="203.2" y2="223.52" width="0.1524" layer="91"/>
 <junction x="203.2" y="223.52"/>
-<pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="203.2" x2="203.2" y2="203.2" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="203.2" x2="203.2" y2="210.82" width="0.1524" layer="91"/>
 <junction x="203.2" y="210.82"/>
 <pinref part="R17" gate="G$1" pin="1"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="226.06" y1="142.24" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
@@ -7739,10 +7739,10 @@ D8: RF RX data</text>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="233.68" y1="223.52" x2="238.76" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="203.2" x2="238.76" y2="203.2" width="0.1524" layer="91"/>
 <junction x="238.76" y="203.2"/>
 <pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="223.52" y1="152.4" x2="223.52" y2="134.62" width="0.1524" layer="91"/>
