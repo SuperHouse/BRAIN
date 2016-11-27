@@ -8323,18 +8323,9 @@ D8: RF RX data</text>
 </net>
 <net name="PI_RTS" class="0">
 <segment>
-<pinref part="Q3" gate="G$1" pin="S"/>
-<wire x1="10.16" y1="205.74" x2="22.86" y2="205.74" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="2"/>
-<wire x1="22.86" y1="205.74" x2="25.4" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="208.28" x2="22.86" y2="205.74" width="0.1524" layer="91"/>
-<junction x="22.86" y="205.74"/>
-<label x="12.7" y="205.74" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="H1" gate="G$1" pin="6"/>
-<wire x1="78.74" y1="149.86" x2="58.42" y2="149.86" width="0.1524" layer="91"/>
-<label x="60.96" y="149.86" size="1.778" layer="95"/>
+<wire x1="78.74" y1="149.86" x2="60.96" y2="149.86" width="0.1524" layer="91"/>
+<label x="63.5" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -8387,8 +8378,17 @@ D8: RF RX data</text>
 <net name="GPIO4" class="0">
 <segment>
 <pinref part="H1" gate="G$1" pin="4"/>
-<wire x1="78.74" y1="154.94" x2="60.96" y2="154.94" width="0.1524" layer="91"/>
-<label x="63.5" y="154.94" size="1.778" layer="95"/>
+<wire x1="78.74" y1="154.94" x2="58.42" y2="154.94" width="0.1524" layer="91"/>
+<label x="60.96" y="154.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="Q3" gate="G$1" pin="S"/>
+<wire x1="10.16" y1="205.74" x2="22.86" y2="205.74" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="22.86" y1="205.74" x2="25.4" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="208.28" x2="22.86" y2="205.74" width="0.1524" layer="91"/>
+<junction x="22.86" y="205.74"/>
+<label x="12.7" y="205.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO18" class="0">
