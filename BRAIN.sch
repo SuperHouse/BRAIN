@@ -7326,8 +7326,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <text x="7.62" y="350.52" size="1.778" layer="97">D0: Serial RX
 D1: Serial TX
 D5: RF TX data
-D6: RF TX LED (green)
-D7: RX RX LED (yellow)
+D6: RF RX LED (green)
+D7: RF TX LED (yellow)
 D8: RF RX data</text>
 <wire x1="3.81" y1="332.74" x2="109.22" y2="332.74" width="0.3048" layer="97" style="longdash"/>
 <wire x1="109.22" y1="332.74" x2="109.22" y2="372.11" width="0.3048" layer="97" style="longdash"/>
